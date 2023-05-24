@@ -1,0 +1,34 @@
+									##POM##
+(Page Object Module/ Element Repositary/Object Repositary)
+
+WE USE THE POM FOR TO AVOID THE STEAL ELEMENT REFERENCE EXECEPTION.
+
+ADVANTAGES OF POM:--
+1. You can avoid the steale element reference Exception.
+2. Reuseability of the code.
+3. Readability of code
+4. Reduces maintenance effort
+
+
+It is a design pattern which gives the solution for frequently accuring problems while performing the Automation Testing as well as Devlopment.
+# PROCEDURE OF POM :-
+1. You have to create seperate classes for all the Pages and in the suffix we have to call the page
+2. You have to pass the Credentials in the respective Java Class(username,password,login)
+3. You have to make the element as Private and call getters Method
+4. Call the Annotation @findBy(id="value")   there is one more method is findall():-[To find multiple elememts] {to avoid stale element reference exception}}
+   Private WebElement ele
+5. You have to call PageFactory.initElement:it is a class and consist of a static method to initialize @findBy(), if not Written then We get nullPointer Exception
+6. You have to call the Base Class
+7. you have to call the Action Method(It will take you to the New Page)
+8. The Action Method Will return you to the next Landing Page
+
+
+
+FLUENT WAIT :-It is used to change the timeInterval from one cycle to anather cycle.
+
+PageLoad:-- It is appicable for only two Methods
+	    # To control the wait 
+	    # Until Complete url is launched this wait wont jump to the nextLine.
+	      To restric the loading of the url the given time if it id=s not loading then it will give the timeoutException.
+	    *get(String)
+	    *navigate.to(String)
